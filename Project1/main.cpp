@@ -11,6 +11,7 @@ int main() {
 
    a = tridiagonal(n);
    b = topliz(n);
+   c = logerr(n);
 
    return 0;
 

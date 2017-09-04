@@ -5,7 +5,9 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     tridiagonal.cpp \
-    topliz.cpp
+    topliz.cpp \
+    logerr.cpp \
+    lu.cpp
 
 HEADERS += \
     project1_header.h
