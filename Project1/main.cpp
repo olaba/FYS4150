@@ -1,21 +1,17 @@
-#include <iostream>
-#include <math.h>
-#include <fstream>
-#include <project1_header.h>
-
+#include "project1_header.h"
 using namespace std;
 
-int main()
-{
-int n = 10;
 
-//General tridiagonal algorithm
-double a = tridiagonal(n);
+int main() {
 
-//Topliz algorithm
-double b = topliz(n);
+   int n = 10;
 
+   double a = 0.0;
+   double b = 0.0;
 
-return a;
+   a = tridiagonal(n);
+   b = topliz(n);
+
+   return 0;
 
 }
