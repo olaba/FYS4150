@@ -98,6 +98,5 @@ plt.ylabel("relative error (log10)")
 ax = plt.gca()
 ax.set_xticks([-3,-2,-1])
 plt.grid()
-
 plt.show()
 fig3.savefig('errors.png')
