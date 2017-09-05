@@ -2,12 +2,12 @@
 
 void tridiagonal(int n) {
 
-//initialize and opening file
     //initialize and opening file
     std::ofstream myfile;
     if(n == 10){myfile.open("results_tridiagonal_10n.txt");}
     if(n == 100){myfile.open("results_tridiagonal_100n.txt");}
     if(n == 1000){myfile.open("results_tridiagonal_1000n.txt");}
+    //if(n == 10000000){myfile.open("results_tridiagonal_10e7n.txt");}
 
 //initialize vector d and e1, e2 of a general tridiagonal matrix
 double e1[n]; //upper diagonal (one too short?)

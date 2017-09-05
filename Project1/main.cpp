@@ -4,16 +4,16 @@ using namespace std;
 
 int main() {
 
-   //number of mesh points n.
+   //number of grid points n.
    int n[3] = {10,100,1000};
 
+   //runs the algorithms for all n
    for(int i = 0; i < 3; i++){
 
        tridiagonal(n[i]);
        topliz(n[i]);
        exact(n[i]);
-       //logerr(i);
-       //lu(i);
+       logerr(n[i]);
 
    }//end for
 

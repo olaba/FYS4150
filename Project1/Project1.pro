@@ -7,8 +7,8 @@ SOURCES += main.cpp \
     tridiagonal.cpp \
     topliz.cpp \
     logerr.cpp \
-    lu.cpp \
-    exact.cpp
+    exact.cpp \
+    LU.cpp
 
 HEADERS += \
     project1_header.h

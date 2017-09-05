@@ -16,10 +16,10 @@ void topliz(int n);
 void exact(int n);
 
 //initialize a function that finds the relative error.
-double logerr(double ex, double x);
+void logerr(int n);
 
 //initialize a function to do all the LU stuff.
-double LU();
+void LU(int n);
 
 #endif // PROJECT1_HEADER_H
 
