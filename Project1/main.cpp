@@ -4,14 +4,19 @@ using namespace std;
 
 int main() {
 
-   int n = 10;
+   //number of mesh points n.
+   int n[3] = {10,100,1000};
 
-   double a = 0.0;
-   double b = 0.0;
+   for(int i = 0; i < 3; i++){
 
-   a = tridiagonal(n);
-   b = topliz(n);
-   c = logerr(n);
+       tridiagonal(n[i]);
+       topliz(n[i]);
+       exact(n[i]);
+       //logerr(i);
+       //lu(i);
+
+   }//end for
+
 
    return 0;
 

@@ -7,10 +7,13 @@
 using namespace std;
 
 //initialize a function that solves a general tridiagonal matrix.
-double tridiagonal(int n);
+void tridiagonal(int n);
 
 //initialize a function that solves the töpliz matrix.
-double topliz(int n);
+void topliz(int n);
+
+//initialize a function that computes exact values for the problem
+void exact(int n);
 
 //initialize a function that finds the relative error.
 double logerr(double ex, double x);
