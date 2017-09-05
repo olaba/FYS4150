@@ -10,7 +10,7 @@ void topliz(int n) {
     if(n == 1000){myfile.open("results_topliz_1000n.txt");}
     //if(n == 10000000){myfile.open("results_topliz_10e7n.txt");}
 
-    //initialize vector d of a töpliz tridiagonal matrix, an
+    //initialize vector d of a töpliz tridiagonal matrix, and some vectors needed
     double d[n]; //mid diagonal
     double y[n]; //forcing term f(x)
     double x[n]; //Our numerical results
