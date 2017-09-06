@@ -4,7 +4,6 @@
 #include<iostream>
 #include<math.h>
 #include<fstream>
-#include<vector>
 using namespace std;
 
 void logerr(int n){
@@ -16,7 +15,6 @@ void logerr(int n){
     double x[n]; //Our numerical results
     double h = (1.0/(n+1)); //steplength
     double ex[n]; //exact values
-    double error[n]; //error values
 
 
     //Declearing the töpliz matrix values and forcing term.

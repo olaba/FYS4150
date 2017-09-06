@@ -1,10 +1,17 @@
-//A function where we compute the linear eq with LU code
+//A function where we compute the linear eq with LU code given at website
+#include<iostream>
+#include<math.h>
+#include<fstream>
+#include<lib.h>
+using namespace std;
 
-void LU(){
+void lu(int n){
 
-//need to install armadillo?
 
-//or just use the code from web
+
+ludcmp(double a **,int b, int* c, double* d){
+lubksb()
+
 
 
 }
