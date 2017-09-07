@@ -9,8 +9,8 @@ void lu(int n){
 
 
 
-ludcmp(double a **,int b, int* c, double* d){
-lubksb()
+//ludcmp(double a **,int b, int* c, double* d){
+//lubksb()
 
 
 

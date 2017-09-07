@@ -4,7 +4,7 @@
 #include <iostream>
 #include <math.h>
 #include <fstream>
-using namespace std;
+
 
 //initialize a function that solves a general tridiagonal matrix.
 void tridiagonal(int n);

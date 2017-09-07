@@ -8,7 +8,7 @@ SOURCES += main.cpp \
     topliz.cpp \
     logerr.cpp \
     exact.cpp \
-    LU.cpp
+    lu.cpp
 
 HEADERS += \
     project1_header.h

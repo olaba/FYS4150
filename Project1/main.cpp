@@ -1,23 +1,17 @@
 #include "project1_header.h"
+
 using namespace std;
 
+int main(int argc, char *argv[]) {
 
-int main() {
+//runs the algorithms for all n
+for(int i = 1; i < (argc+1); i++){
 
-   //number of grid points n.
-   int n[3] = {10,100,1000};
+       tridiagonal(atoi(argv[i]));
+       //topliz(atoi(argv[i]));
+       //exact(atoi(argv[i]));
+       //logerr(atoi(argv[i]));
 
-   //runs the algorithms for all n
-   for(int i = 0; i < 3; i++){
-
-       tridiagonal(n[i]);
-       topliz(n[i]);
-       exact(n[i]);
-       logerr(n[i]);
-
-   }//end for
-
-
-   return 0;
-
+}//end for
+return 0;
 }
