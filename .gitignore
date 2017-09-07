@@ -4,3 +4,6 @@ Project1/DebugFolder/Makefile
 *.stash
 Project1/DebugFolder/results.txt
 *.user
+Project1/Project1.pro
+*.o
+Project1/DebugFolder/Makefile

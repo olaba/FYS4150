@@ -20,7 +20,6 @@ void topliz(int n) {
     //Declearing the töpliz matrix values and forcing term.
     for(int i = 0 ; i < n; i++){d[i] = 2.0; y[i] = h*h*(100*exp(-10*(h*(i+1))));}
 
-
     //Forward substitution algorithm
     for(int i = 1 ; i < n + 1; i++){
 

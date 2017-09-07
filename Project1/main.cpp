@@ -1,4 +1,7 @@
 #include "project1_header.h"
+#include <armadillo>
+
+using namespace arma;
 using namespace std;
 
 
