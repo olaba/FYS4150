@@ -33,20 +33,20 @@ for(int i = 0 ; i < n; i++){
 for(int i = 1; i < n ; i++){
 
      //declearing dtilde
-     d[i] = d[i] - (e1[i]*e2[i])/d[i-1];
+     d[i] -= (e1[i]*e2[i])/d[i-1];
 
      //declearing ytilde
-     y[i] = y[i] - ((e1[i])*(y[i-1]))/d[i-1];
+     y[i] -= ((e1[i])*(y[i-1]))/d[i-1];
 
 }//end for
 
 //Declare x_n and the endpoints
-x[n-1] = (y[n-1])/(d[n-1]);
+x[n] = (y[n-1])/(d[n-1]);
 x[0] = 0.0;
 x[n+1] =0.0;
 
 //Backward substitution with ytilde and dtilde
-for(int i = (n+1) ; i > 1; i--){
+for(int i = n ; i > 1; i--){
 
     x[i-1] = (y[i-1] - (e2[i-1]*(x[i])))/d[i-1];
 
