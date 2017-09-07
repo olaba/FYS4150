@@ -14,7 +14,10 @@ double e1[n]; //upper diagonal (one too short?)
 double d[n]; //mid diagonal
 double e2[n]; //lower diagonal (one too short?)
 double y[n]; //forcing term f(x)
-double x[n] = {0.0}; //Our numerical results
+double x[n];// = {0.0}; //Our numerical results
+for (int i = 0; i < n; i++) {
+    x[i] = 0.0;
+}
 double h = (1.0/(n+1)); //steplength
 
 //Declearing the töpliz matrix values and forcing term.

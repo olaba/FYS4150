@@ -1,0 +1,6 @@
+
+*.user
+Project1/DebugFolder/Makefile
+*.stash
+Project1/DebugFolder/results.txt
+*.user
