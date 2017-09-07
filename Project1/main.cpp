@@ -17,8 +17,8 @@ int main()
     double e[n];
     double d[n];
     double y[n]; //forcing term f(x)
-    double x[n] = {0.0}; //Our numerical results
-    double ex[n] = {0.0}; //The exact solution
+    double x[n]; //Our numerical results
+    double ex[n]; //The exact solution
     double h = (1.0/(n-1)); //steplength
 
      //Declearing the töpliz matrix values and forcing term.
