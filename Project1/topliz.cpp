@@ -11,8 +11,8 @@ void topliz(int n) {
     //if(n == 10000000){myfile.open("results_topliz_10e7n.txt");}
 
     //initialize vector d of a töpliz tridiagonal matrix, and some vectors needed
-    double *d = new double[n]; //mid diagonal
-    double *y = new double[n]; //forcing term f(x)
+    double *d = new double[n+2]; //mid diagonal
+    double *y = new double[n+2]; //forcing term f(x)
     double *x = new double [n+2]; //Our numerical results
     double h = (1.0/(n+1)); //steplength
 
@@ -20,7 +20,7 @@ void topliz(int n) {
     //Declearing the töpliz matrix values and forcing term.
     for(int i = 0 ; i < n; i++){
 
-        d[i] = (1.0 + (i+1))/(i+1);
+        d[i] = (1.0 + i)/i;
         y[i] = h*h*(100*exp(-10*(h*(i+1))));
 
     }//end for
