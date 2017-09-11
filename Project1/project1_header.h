@@ -4,6 +4,7 @@
 #include <iostream>
 #include <math.h>
 #include <fstream>
+#include <chrono>
 
 
 //initialize a function that solves a general tridiagonal matrix.

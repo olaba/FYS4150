@@ -1,6 +1,7 @@
 //Algorithm to solve a topliz matrix
 #include "project1_header.h"
 #include<iostream>
+using namespace std;
 
 void topliz(int n) {
 
@@ -36,7 +37,10 @@ void topliz(int n) {
 
     }//end for
 
-    //START TIMING HERE
+    //Decleare start and stop time.
+    std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
+    // Start time ------------------------------------------------
+    start = std::chrono::high_resolution_clock::now();
 
     //Forward substitution algorithm
     for(int i = 2 ; i < (n+1); i++){
@@ -58,7 +62,9 @@ void topliz(int n) {
 
     }//end for
 
-    //END TIMING HERE
+    //Stop time --------------------------------------------
+    end = std::chrono::high_resolution_clock::now();
+    cout << (double) chrono::duration_cast<chrono::nanoseconds>(end-start).count() << "\n";
 
     //Writing results to file
     for(int i = 0; i < (n+2); i++){

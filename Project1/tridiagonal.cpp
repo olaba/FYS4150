@@ -1,6 +1,9 @@
-
 #include "project1_header.h"
-using std::ofstream;
+#include <chrono>
+#include <ctime>
+#include <ratio>
+using namespace std;
+
 
 void tridiagonal(int n) {
 
@@ -29,6 +32,16 @@ for(int i = 0 ; i < (n+2); i++){
 
 }//end for
 
+//Declare x_n and the endpoints
+x[n] = (y[n])/(d[n]);
+x[0] = 0.0;
+x[n+1] =0.0;
+
+
+//Decleare start and stop time.
+std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
+// Start time ------------------------------------------------
+start = std::chrono::high_resolution_clock::now();
 
 //Forward substitution algorithm
 for(int i = 2; i < (n+1) ; i++){
@@ -43,10 +56,6 @@ for(int i = 2; i < (n+1) ; i++){
 
 }//end for
 
-//Declare x_n and the endpoints
-x[n] = (y[n])/(d[n]);
-x[0] = 0.0;
-x[n+1] =0.0;
 
 //Backward substitution with ytilde and dtilde
 for(int i = n-1 ; i >= 1; i--){
@@ -54,6 +63,10 @@ for(int i = n-1 ; i >= 1; i--){
     x[i] = (y[i] - (e2[i]*(x[i+1])))/d[i];
 
 }//end for
+
+//Stop time --------------------------------------------
+end = std::chrono::high_resolution_clock::now();
+cout << chrono::duration_cast<chrono::nanoseconds>(end-start).count() << "\n";
 
 //writing results to file
 for(int i = 0; i < (n+2); i++){
