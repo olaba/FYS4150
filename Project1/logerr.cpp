@@ -15,35 +15,43 @@ void logerr(int n){
     double *ex = new double [n+2]; //exact results
     double h = (1.0/(n+1)); //steplength
 
-    //Setting the end values.
-    d[n+1] = d[0] = 2.0;
+    // ----------- EXACT ANSWER -------------------
 
-    //Calculating exact answer
-    for(int i = 0; i < (n+2); i++){
+    //Calculating answer
+    for(int i = 0; i < (n+1); i++){
 
-       ex[i] = 1 - (1-exp(-10))*h*i - exp(-10*h*i);
+        ex[i] = 1 - (1-exp(-10))*h*i - exp(-10*h*i);
 
     }//end for
 
-    //Initializing the töpliz matrix values.
-    for(int i = 2 ; i < (n+2); i++){
+    //Making sure final value is exactly zero.
+    ex[n+1] = 0.0;
 
-        d[i-1] = (i+1.0)/( (double) i);
+    //----------------------------------------------
+
+    //--------------- TOPLIZ NUMERICAL ANSWER ------
+
+    //Setting the end values.
+    d[0] = d[1] = d[n+1] = 2.0;
+
+    //Initializing the töpliz matrix values.
+    for(int i = 2 ; i < (n+1); i++){
+
+        d[i] = (i+1.0)/(i);
+        //std::cout << d[i] << "\n" ;
 
     }//end for
 
 
     //Initializing the forcing term.
-    for(int i = 0 ; i < (n+1); i++){
+    for(int i = 0 ; i < (n+2); i++){
 
-        y[i] = h*h*(100*exp(-10*(h*(i))));
+         y[i] = h*h*(100*exp(-10*(h*(i))));
 
     }//end for
 
-    //START TIMING HERE
-
     //Forward substitution algorithm
-    for(int i = 1 ; i < (n + 1); i++){
+    for(int i = 2 ; i < (n+1); i++){
 
          //declearing ytilde
          y[i] += (y[i-1])/(d[i-1]);
@@ -56,18 +64,18 @@ void logerr(int n){
 
 
     //Backward substitution with ytilde and dtilde,
-    for(int i = n; i > 1; i--){
+    for(int i = n ; i > 1; i--){
 
        x[i-1] = (y[i-1]+x[i])/(d[i-1]);
 
     }//end for
-
 
     //initialize and opening file
     std::ofstream myfile;
     if(n == 10){myfile.open("errors_10n.txt");}
     if(n == 100){myfile.open("errors_100n.txt");}
     if(n == 1000){myfile.open("errors_1000n.txt");}
+    if(n == 1000000){myfile.open("errors_10e6n.txt");}
 
     //calculate the error. Not the endpoints where we just sat our values.
     for(int i = 1; i < n+1; i++){

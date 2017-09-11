@@ -35,9 +35,11 @@ for(int i = 2; i < (n+1) ; i++){
 
      //initializing dtilde
      d[i] -= (e1[i]*e2[i-1])/d[i-1];
+     //std::cout << d[i] << "\n";
 
      //initializing ytilde
      y[i] -= ((e1[i])*(y[i-1]))/d[i-1];
+
 
 }//end for
 

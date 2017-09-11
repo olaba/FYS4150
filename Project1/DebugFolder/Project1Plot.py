@@ -6,7 +6,6 @@ Created on Tue Sep  5 10:33:22 2017
 
 Plotting script for Project1 in FYS4150
 """
-from math import log10
 
 #Reading results from C++ code
 with open("results_tridiagonal_10n.txt") as file:
@@ -44,12 +43,17 @@ with open("errors_100n.txt") as file:
 
 with open("errors_1000n.txt") as file:
     error_1000n = file.readlines()
+    
+with open("errors_10e6n.txt") as file:
+    error_10e6n = file.readlines()
+
 
 #Extracting the max error in every errorlist. Not used to Python, sorry!
-error_max = [0,0,0]
+error_max = [0,0,0,0]
 error_max[0] = max(error_10n)
 error_max[1] = max(error_100n)
 error_max[2] = max(error_1000n)
+error_max[3] = max(error_10e6n)
 
 #Initializing the steplength lists. Not used to Python, sorry!
 h10 = [0]*12
@@ -65,7 +69,7 @@ for i in range(1,1003):
 #Plotting töpliz results vs exact results (n = 10,100,1000)
 import matplotlib.pyplot as plt
 fig1 = plt.figure(1)
-h_10 = plt.plot(h10,tridiagonal10, h10, exact10)
+h_10 = plt.plot(h10,topliz10, h10, exact10)
 h_10[0].set_ls('--')
 plt.title("Results with n = 10")
 plt.legend([h_10[0],h_10[1]],["Numerical results", "Exact values"])
@@ -89,14 +93,14 @@ plt.show()
 fig3.savefig('results1000n.png')
 
 #Plotting the errors
-x = [-1,-2,-3]
+x = [-1,-2,-3, -6]
 fig4 = plt.figure(4)
 h_error = plt.scatter(x,error_max)
 plt.title("Relative error vs. stepsize h")
 plt.xlabel("stepsize h (log10)")
 plt.ylabel("relative error (log10)")
 ax = plt.gca()
-ax.set_xticks([-3,-2,-1])
+ax.set_xticks([-3,-2,-1,-4,-5,-6])
 plt.grid()
 plt.show()
 fig4.savefig('errors.png')
