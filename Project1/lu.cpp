@@ -2,7 +2,6 @@
 #include<iostream>
 #include<math.h>
 #include<fstream>
-#include<lib.h>
 using namespace std;
 
 void lu(int n){

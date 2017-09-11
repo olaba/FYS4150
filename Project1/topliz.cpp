@@ -1,5 +1,6 @@
 //Algorithm to solve a topliz matrix
 #include "project1_header.h"
+#include<iostream>
 
 void topliz(int n) {
 
@@ -8,7 +9,7 @@ void topliz(int n) {
     if(n == 10){myfile.open("results_topliz_10n.txt");}
     if(n == 100){myfile.open("results_topliz_100n.txt");}
     if(n == 1000){myfile.open("results_topliz_1000n.txt");}
-    //if(n == 10000000){myfile.open("results_topliz_10e7n.txt");}
+    if(n == 10000000){myfile.open("results_topliz_10e7n.txt");}
 
     //initialize vector d of a töpliz tridiagonal matrix, and some vectors needed
     double *d = new double[n+2]; //mid diagonal
@@ -16,29 +17,38 @@ void topliz(int n) {
     double *x = new double [n+2]; //Our numerical results
     double h = (1.0/(n+1)); //steplength
 
+    //Setting the end values.
+    d[n+1] = d[0] = 2.0;
 
-    //Declearing the töpliz matrix values and forcing term.
-    for(int i = 0 ; i < n; i++){
+    //Initializing the töpliz matrix values.
+    for(int i = 2 ; i < (n+2); i++){
 
-        d[i] = (1.0 + i)/i;
-        y[i] = h*h*(100*exp(-10*(h*(i+1))));
+        d[i-1] = (i+1.0)/( (double) i);
+        std::cout << d[i-1] << "\n" ;
+
+    }//end for
+
+
+    //Initializing the forcing term.
+    for(int i = 0 ; i < (n+2); i++){
+
+        y[i] = h*h*(100*exp(-10*(h*(i))));
 
     }//end for
 
     //START TIMING HERE
 
     //Forward substitution algorithm
-    for(int i = 1 ; i < (n + 1); i++){
+    for(int i = 1 ; i < (n+2); i++){
 
          //declearing ytilde
-         y[i] = y[i] + (y[i-1])/(d[i-1]);
+         y[i] += (y[i-1])/(d[i-1]);
 
     }//end for
 
     //Declare x[n-1] and endpoints
     x[n] = (y[n])/(d[n]);
-    x[0] = 0.0;
-    x[n+2] = 0.0;
+    x[n+1] = x[0] = 0.0;
 
 
     //Backward substitution with ytilde and dtilde,
@@ -51,7 +61,7 @@ void topliz(int n) {
     //END TIMING HERE
 
     //Writing results to file
-    for(int i = 0; i < n; i++){
+    for(int i = 0; i < n+2; i++){
 
         myfile << x[i] << "\n";
 

@@ -52,20 +52,20 @@ error_max[1] = max(error_100n)
 error_max[2] = max(error_1000n)
 
 #Initializing the steplength lists. Not used to Python, sorry!
-h10 = [0]*10
-h100 = [0]*100
-h1000 = [0]*1000
-for i in range(1,11):
-        h10[i-1] = (1/11)*i
-for i in range(1,101):
-        h100[i-1] = (1/101)*i
-for i in range(1,1001):
-        h1000[i-1] = (1/1001)*i
+h10 = [0]*12
+h100 = [0]*102
+h1000 = [0]*1002
+for i in range(1,13):
+        h10[i-1] = (1/13)*i
+for i in range(1,103):
+        h100[i-1] = (1/103)*i
+for i in range(1,1003):
+        h1000[i-1] = (1/1003)*i
 
 #Plotting töpliz results vs exact results (n = 10,100,1000)
 import matplotlib.pyplot as plt
 fig1 = plt.figure(1)
-h_10 = plt.plot(h10,topliz10, h10, exact10)
+h_10 = plt.plot(h10,tridiagonal10, h10, exact10)
 h_10[0].set_ls('--')
 plt.title("Results with n = 10")
 plt.legend([h_10[0],h_10[1]],["Numerical results", "Exact values"])

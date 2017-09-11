@@ -1,3 +1,4 @@
+
 #include "project1_header.h"
 using std::ofstream;
 
@@ -8,7 +9,7 @@ ofstream myfile;
 if(n == 10){myfile.open("results_tridiagonal_10n.txt");}
 if(n == 100){myfile.open("results_tridiagonal_100n.txt");}
 if(n == 1000){myfile.open("results_tridiagonal_1000n.txt");}
-//if(n == 10000000){myfile.open("results_tridiagonal_10e7n.txt");}
+if(n == 1000000){myfile.open("results_tridiagonal_10e6n.txt");}
 
 //initialize ¤#!dynamically allocated!#¤ arrays d and e1, e2 of a general tridiagonal matrix
 double *e1 = new double[n+2]; //upper diagonal
@@ -61,6 +62,7 @@ for(int i = 0; i < (n+2); i++){
 
 //closing file and deleting arrays
 myfile.close();
+
 delete[] e1;
 delete[] e2;
 delete[] d;
