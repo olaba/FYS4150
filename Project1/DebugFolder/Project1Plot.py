@@ -47,6 +47,15 @@ with open("errors_1000n.txt") as file:
 with open("errors_10e6n.txt") as file:
     error_10e6n = file.readlines()
 
+with open("results_lud_10n.txt") as file:
+    lud10 = file.readlines()
+
+with open("results_lud_100n.txt") as file:
+    lud100 = file.readlines()
+
+with open("results_lud_1000n.txt") as file:
+    lud1000 = file.readlines()
+
 
 #Extracting the max error in every errorlist. Not used to Python, sorry!
 error_max = [0,0,0,0]
@@ -65,31 +74,42 @@ for i in range(1,103):
         h100[i-1] = (1/103)*i
 for i in range(1,1003):
         h1000[i-1] = (1/1003)*i
+        
+#Initializing steplengths for the lud results (only n entries)
+h10lud = [0]*10
+h100lud = [0]*100
+h1000lud = [0]*1000
+for i in range(1,11):
+        h10lud[i-1] = (1/11)*i
+for i in range(1,101):
+        h100lud[i-1] = (1/101)*i
+for i in range(1,1001):
+        h1000lud[i-1] = (1/1001)*i
 
 #Plotting töpliz results vs exact results (n = 10,100,1000)
 import matplotlib.pyplot as plt
 fig1 = plt.figure(1)
-h_10 = plt.plot(h10,topliz10, h10, exact10, h10, lu10)
+h_10 = plt.plot(h10,topliz10, h10, exact10, h10lud, lud10)
 h_10[0].set_ls('--')
-h_10[2].set_ls('.-')
+h_10[2].set_ls('--')
 plt.title("Results with n = 10")
 plt.legend([h_10[0],h_10[1],h_10[2]],["Thomas algorithm", "Exact values","LU decomp."])
 plt.show()
 fig1.savefig('results10n.png')
 
 fig2 = plt.figure(2)
-h_100 = plt.plot(h100,topliz100, h100, exact100,h100,lu100)
+h_100 = plt.plot(h100,topliz100, h100, exact100,h100lud,lud100)
 h_100[0].set_ls('--')
-h_100[2].set_ls('.-')
+h_100[2].set_ls('--')
 plt.title("Results with n = 100")
 plt.legend([h_100[0],h_100[1],h_100[2]],["Thomas algorithm", "Exact values","LU decomp."])
 plt.show()
 fig2.savefig('results100n.png')
 
 fig3 = plt.figure(3)
-h_1000 = plt.plot(h1000,topliz1000, h1000, exact1000)
+h_1000 = plt.plot(h1000,topliz1000, h1000, exact1000,  h1000lud, lud1000)
 h_1000[0].set_ls('--')
-h_1000[2].set_ls('.-')
+h_1000[2].set_ls('--')
 plt.title("Results with n = 1000")
 plt.legend([h_1000[0],h_1000[1],h_1000[2]],["Thomas algorithm", "Exact values","LU decomp."])
 plt.show()
