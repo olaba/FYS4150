@@ -2,16 +2,17 @@
 #include<iostream>
 #include<math.h>
 #include<fstream>
-#include<lib.h>
+#include<armadillo>
+
+using namespace arma;
 using namespace std;
 
-void lu(int n){
+//void lu(int n){
 
 
 
-ludcmp(double a **,int b, int* c, double* d){
-lubksb()
+//ludcmp(double a **,int b, int* c, double* d){
+//lubksb();}
 
 
-
-}
+//}
