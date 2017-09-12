@@ -20,7 +20,7 @@ void exact(int n);
 void logerr(int n);
 
 //initialize a function to do all the LU stuff.
-void LU(int n);
+void lud(int n);
 
 #endif // PROJECT1_HEADER_H
 

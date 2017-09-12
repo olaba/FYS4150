@@ -8,7 +8,13 @@ SOURCES += main.cpp \
     topliz.cpp \
     logerr.cpp \
     exact.cpp \
-    lu.cpp
+    lud.cpp
 
 HEADERS += \
     project1_header.h
+
+
+
+INCLUDEPATH += /usr/local/include
+LIBS += -L/usr/local/lib
+LIBS += -larmadillo -llapack -lblas
