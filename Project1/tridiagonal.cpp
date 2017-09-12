@@ -1,4 +1,7 @@
 #include "project1_header.h"
+#include <chrono>
+#include <ctime>
+#include <ratio>
 using namespace std;
 
 
@@ -36,9 +39,9 @@ x[n+1] =0.0;
 
 
 //Decleare start and stop time.
-clock_t start, finish;
+std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
 // Start time ------------------------------------------------
-start = clock();
+start = std::chrono::high_resolution_clock::now();
 
 //Forward substitution algorithm
 for(int i = 2; i < (n+1) ; i++){
@@ -62,9 +65,8 @@ for(int i = n-1 ; i >= 1; i--){
 }//end for
 
 //Stop time --------------------------------------------
-finish = clock();
-double time = (double) (finish - start)/((double) CLOCKS_PER_SEC);
-cout << time << " is used on tridiagonal for n= " << n << "\n";
+end = std::chrono::high_resolution_clock::now();
+cout << "tridiagonal used: " <<(double) chrono::duration_cast<chrono::nanoseconds>(end-start).count() << " nanoseconds for n = " << n << "\n";
 
 //writing results to file
 for(int i = 0; i < (n+2); i++){

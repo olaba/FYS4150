@@ -32,8 +32,7 @@ void lud(int n){
     mat m = m1 + m2 + m3;
 
 
-    //mat L, U;
-    //lu(L, U, m);
+
 
 
     //Initializing forcing term vector and steplength h
@@ -59,4 +58,8 @@ void lud(int n){
     //closing file
     myfile.close();
 
+
+
+    //mat L, U;
+    //lu(L, U, m);
 }
