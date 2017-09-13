@@ -45,8 +45,19 @@ void lud(int n){
 
     }//end for
 
+    //Decleare start and stop time.
+    std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
+    // Start time ------------------------------------------------
+    start = std::chrono::high_resolution_clock::now();
+
+
     //Solving with solve
     vec x = solve(m,y);
+
+    //Stop time --------------------------------------------
+    end = std::chrono::high_resolution_clock::now();
+    cout << "lud used: " <<(double) chrono::duration_cast<chrono::nanoseconds>(end-start).count() << " nanoseconds for n = " << n << "\n";
+
 
     //writing results to file
     for(int i = 0; i < (n); i++){
