@@ -38,7 +38,7 @@ x[0] = 0.0;
 x[n+1] =0.0;
 
 
-//Decleare start and stop time.
+//Declare start and stop time.
 std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
 // Start time ------------------------------------------------
 start = std::chrono::high_resolution_clock::now();
