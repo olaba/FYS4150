@@ -20,6 +20,8 @@ void topliz(int n) {
 
     //Setting the end values.
     d[0] = d[1] = d[n+1] = 2.0;
+    x[n] = (y[n])/(d[n]);
+    x[n+1] = x[0] = 0.0;
 
     //Initializing the töpliz matrix values.
     for(int i = 2 ; i < (n+1); i++){
@@ -49,10 +51,6 @@ void topliz(int n) {
          y[i] += (y[i-1])/(d[i-1]);
 
     }//end for
-
-    //Declare x[n-1] and endpoints
-    x[n] = (y[n])/(d[n]);
-    x[n+1] = x[0] = 0.0;
 
 
     //Backward substitution with ytilde and dtilde,
