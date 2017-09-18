@@ -27,7 +27,7 @@ void topliz(int n) {
     for(int i = 2 ; i < (n+1); i++){
 
         d[i] = (i+1.0)/(i);
-        //std::cout << d[i] << "\n" ;
+
 
     }//end for
 

@@ -2,7 +2,7 @@
 #include<iostream>
 #include<math.h>
 #include<fstream>
-#include "armadillo"
+#include<armadillo>
 
 using namespace std;
 using namespace arma;
@@ -30,10 +30,6 @@ void lud(int n){
 
     //Adding together the three matrices to get our tridiagonal matrix
     mat m = m1 + m2 + m3;
-
-
-
-
 
     //Initializing forcing term vector and steplength h
     vec y(n);

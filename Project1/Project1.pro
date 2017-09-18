@@ -14,7 +14,6 @@ HEADERS += \
     project1_header.h
 
 
-
-INCLUDEPATH += /usr/local/include
+INCLUDEPATH += LC:\Documents\armadillo-8.100.1\include
 LIBS += -L/usr/local/lib
 LIBS += -larmadillo -llapack -lblas
