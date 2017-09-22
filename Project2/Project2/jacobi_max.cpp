@@ -1,6 +1,17 @@
 //Jacobi max algorithm
 
+#include <iostream>
+#include "armadillo"
+
+using namespace arma;
+using namespace std;
+
+
 //Define tolerance
+
+double eps = 10^(-8);
+
+cout << eps;
 
 //While eps > off(A)
 
