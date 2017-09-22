@@ -8,7 +8,6 @@
 
                 //Update S
 
-
                 // blablabla
 
                 //Execute transformation B = StAS
