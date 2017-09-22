@@ -13,9 +13,9 @@ HEADERS += \
     project2_header.h
 
 
-INCLUDEPATH += C:\Armadillo\include
+INCLUDEPATH += C:\Users\Ola\Documents\armadillo\include
 
 
-LIBS += -LC:\Armadillo\lib_win64
+LIBS += -LC:\Users\Ola\Documents\armadillo\examples\lib_win64
     -llapack_win64_MT
     -lblas_win64_MT
