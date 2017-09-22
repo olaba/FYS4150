@@ -1,26 +1,25 @@
 #include "project1_header.h"
+<<<<<<< HEAD
 #include <armadillo>
 
 using namespace arma;
+=======
+#include "time.h"
+>>>>>>> Project2
 using namespace std;
 
 
-int main() {
+int main(int argc, char *argv[]) {
 
-   //number of grid points n.
-   int n[3] = {10,100,1000};
+//runs the algorithms for all n
+for(int i = 1; i < (argc); i++){
 
-   //runs the algorithms for all n
-   for(int i = 0; i < 3; i++){
+       //tridiagonal(atoi(argv[i]));
+       //topliz(atoi(argv[i]));
+       //exact(atoi(argv[i]));
+       //logerr(atoi(argv[i]));
+       lud(atoi(argv[i]));
 
-       tridiagonal(n[i]);
-       topliz(n[i]);
-       exact(n[i]);
-       logerr(n[i]);
-
-   }//end for
-
-
-   return 0;
-
+}//end for
+return 0;
 }

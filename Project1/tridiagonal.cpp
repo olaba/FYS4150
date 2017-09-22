@@ -1,7 +1,13 @@
 #include "project1_header.h"
+#include <chrono>
+#include <ctime>
+#include <ratio>
+using namespace std;
+
 
 void tridiagonal(int n) {
 
+<<<<<<< HEAD
     //initialize and opening file
     std::ofstream myfile;
     if(n == 10){myfile.open("results_tridiagonal_10n.txt");}
@@ -18,34 +24,84 @@ double x[n];// = {0.0}; //Our numerical results
 for (int i = 0; i < n; i++) {
     x[i] = 0.0;
 }
+=======
+//initialize and opening files depending on n
+ofstream myfile;
+if(n == 10){myfile.open("results_tridiagonal_10n.txt");}
+if(n == 100){myfile.open("results_tridiagonal_100n.txt");}
+if(n == 1000){myfile.open("results_tridiagonal_1000n.txt");}
+if(n == 1000000){myfile.open("results_tridiagonal_10e6n.txt");}
+
+//initialize ¤#!dynamically allocated!#¤ arrays d and e1, e2 of a general tridiagonal matrix
+double *e1 = new double[n+2]; //upper diagonal
+double *d = new double[n+2]; //mid diagonal
+double *e2 = new double[n+2]; //lower diagonal
+double *y = new double[n+2]; //forcing term f(x)
+double *x = new double [n+2]; //Our numerical results
+>>>>>>> Project2
 double h = (1.0/(n+1)); //steplength
 
-//Declearing the töpliz matrix values and forcing term.
-for(int i = 0 ; i < n; i++){e1[i] = -1.0; e2[i] = -1.0; d[i] = 2.0; y[i] = h*h*(100*exp(-10*(h*(i+1))));}
+//Initializing our matrix and the forcing term.
+for(int i = 0 ; i < (n+2); i++){
 
-
-//Forward substitution algorithm
-for(int i = 0; i < (n-1); i++){
-
-     //declearing dtilde
-     d[i+1] = d[i+1] - (e1[i+1]*e2[i])/d[i];
-
-     //declearing ytilde
-     y[i+1] = y[i+1] - ((e1[i+1])*(y[i]))/d[i];
+    e1[i] = -1.0;
+    e2[i] = -1.0;
+    d[i] = 2.0;
+    y[i] = h*h*(100*exp(-10*(h*(i))));
 
 }//end for
 
-//Declare xn-1
-x[n-1] = (y[n-1])/(d[n-1]);
+//Declare x_n and the endpoints
+x[n] = (y[n])/(d[n]);
+x[0] = 0.0;
+x[n+1] =0.0;
 
-//Backward substitution with ytilde and dtilde, and writing to file.
-for(int i = n ; i > 0; i--){x[i-2] = (y[i-2] - (e2[i-2]*(x[i-1])))/d[i-2];}
 
-//writing to file
-for(int i = 0; i < n; i++){myfile << x[i] << "\n";}
+//Declare start and stop time.
+std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
+// Start time ------------------------------------------------
+start = std::chrono::high_resolution_clock::now();
 
-//closing myfile
+//Forward substitution algorithm
+for(int i = 2; i < (n+1) ; i++){
+
+     //initializing dtilde
+     d[i] -= (e1[i]*e2[i-1])/d[i-1];
+     //std::cout << d[i] << "\n";
+
+     //initializing ytilde
+     y[i] -= ((e1[i])*(y[i-1]))/d[i-1];
+
+
+}//end for
+
+
+//Backward substitution with ytilde and dtilde
+for(int i = n-1 ; i >= 1; i--){
+
+    x[i] = (y[i] - (e2[i]*(x[i+1])))/d[i];
+
+}//end for
+
+//Stop time --------------------------------------------
+end = std::chrono::high_resolution_clock::now();
+cout << "tridiagonal used: " <<(double) chrono::duration_cast<chrono::nanoseconds>(end-start).count() << " nanoseconds for n = " << n << "\n";
+
+//writing results to file
+for(int i = 0; i < (n+2); i++){
+
+    myfile << x[i] << "\n";
+
+}//end for
+
+//closing file and deleting arrays
 myfile.close();
+
+delete[] e1;
+delete[] e2;
+delete[] d;
+delete[] x;
+delete[] y;
 
 
 }//end function

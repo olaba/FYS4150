@@ -4,7 +4,8 @@
 #include <iostream>
 #include <math.h>
 #include <fstream>
-using namespace std;
+#include <chrono>
+
 
 //initialize a function that solves a general tridiagonal matrix.
 void tridiagonal(int n);
@@ -19,7 +20,7 @@ void exact(int n);
 void logerr(int n);
 
 //initialize a function to do all the LU stuff.
-void LU(int n);
+void lud(int n);
 
 #endif // PROJECT1_HEADER_H
 

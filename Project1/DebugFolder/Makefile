@@ -15,7 +15,11 @@ CXX           = /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefau
 DEFINES       = -DQT_QML_DEBUG
 CFLAGS        = -pipe -g $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -mmacosx-version-min=10.10 -Wall -W -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -stdlib=libc++ -g -std=gnu++11 $(EXPORT_ARCH_ARGS) -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk -mmacosx-version-min=10.10 -Wall -W -fPIC $(DEFINES)
+<<<<<<< HEAD
 INCPATH       = -I../../Project1 -I. -I/usr/local/include -I/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx-clang
+=======
+INCPATH       = -I../../Project1 -I. -ILC:\Documents\armadillo-8.100.1\include -I/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx-clang
+>>>>>>> Project2
 QMAKE         = /Users/ingvild/Qt/5.9.1/clang_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -55,13 +59,21 @@ SOURCES       = ../main.cpp \
 		../topliz.cpp \
 		../logerr.cpp \
 		../exact.cpp \
+<<<<<<< HEAD
 		../LU.cpp 
+=======
+		../lud.cpp 
+>>>>>>> Project2
 OBJECTS       = main.o \
 		tridiagonal.o \
 		topliz.o \
 		logerr.o \
 		exact.o \
+<<<<<<< HEAD
 		LU.o
+=======
+		lud.o
+>>>>>>> Project2
 DIST          = /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/qdevice.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/device_config.prf \
@@ -221,7 +233,11 @@ DIST          = /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		../topliz.cpp \
 		../logerr.cpp \
 		../exact.cpp \
+<<<<<<< HEAD
 		../LU.cpp
+=======
+		../lud.cpp
+>>>>>>> Project2
 QMAKE_TARGET  = Project1
 DESTDIR       = 
 TARGET        = Project1
@@ -594,6 +610,7 @@ compiler_clean:
 
 ####### Compile
 
+<<<<<<< HEAD
 main.o: ../main.cpp ../project1_header.h \
 		/usr/local/include/armadillo \
 		/usr/local/include/armadillo_bits/compiler_extra.hpp \
@@ -1136,6 +1153,9 @@ main.o: ../main.cpp ../project1_header.h \
 		/usr/local/include/armadillo_bits/newarp_UpperHessenbergEigen_meat.hpp \
 		/usr/local/include/armadillo_bits/newarp_UpperHessenbergQR_meat.hpp \
 		/usr/local/include/armadillo_bits/compiler_setup_post.hpp
+=======
+main.o: ../main.cpp ../project1_header.h
+>>>>>>> Project2
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../main.cpp
 
 tridiagonal.o: ../tridiagonal.cpp ../project1_header.h
@@ -1150,6 +1170,7 @@ logerr.o: ../logerr.cpp
 exact.o: ../exact.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o exact.o ../exact.cpp
 
+<<<<<<< HEAD
 LU.o: ../LU.cpp /usr/local/include/armadillo \
 		/usr/local/include/armadillo_bits/compiler_extra.hpp \
 		/usr/local/include/armadillo_bits/config.hpp \
@@ -1692,6 +1713,10 @@ LU.o: ../LU.cpp /usr/local/include/armadillo \
 		/usr/local/include/armadillo_bits/newarp_UpperHessenbergQR_meat.hpp \
 		/usr/local/include/armadillo_bits/compiler_setup_post.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o LU.o ../LU.cpp
+=======
+lud.o: ../lud.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o lud.o ../lud.cpp
+>>>>>>> Project2
 
 ####### Install
 

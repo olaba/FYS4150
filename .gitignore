@@ -1,15 +1,42 @@
+# Prerequisites
+*.d
 
-*.user
-Project1/DebugFolder/Makefile
-*.stash
-Project1/DebugFolder/results.txt
-*.user
-Project1/Project1.pro
+# Compiled Object files
+*.slo
+*.lo
 *.o
-Project1/DebugFolder/Makefile
-Project1/Project1.pro.user
-Project1/Project1.pro.user
-Project1/LU.cpp
-Project1/DebugFolder/main.o
-Project1/DebugFolder/Makefile
-Project1/DebugFolder/Project1
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Qt stuff
+*.pro
+*.pro.user
+*.pro.user.68bc0ba
+
+build-Project2-Desktop_Qt_5_9_1_MSVC2017_64bit-Debug
+
+build-Project2-Desktop_Qt_5_9_1_clang_64bit-Debug
+
