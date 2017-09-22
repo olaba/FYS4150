@@ -1,5 +1,5 @@
 #include <iostream>
-//#include "...\Documents\armadillo\include"
+//#include "..\..\..\..\armadillo\include\armadillo"
 #include<armadillo>
 
 using namespace arma;
@@ -7,5 +7,5 @@ using namespace std;
 
 int main()
 {
-mat
+
 }
