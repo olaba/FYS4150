@@ -9,12 +9,13 @@ SOURCES += main.cpp \
     jacobi_max.cpp \
     lanczos.cpp
 
-
-INCLUDEPATH += /usr/local/include
-LIBS += -L/usr/local/lib
-
-SOURCES += main.cpp
-LIBS += -larmadillo -llapack -lblas
-
 HEADERS += \
     project2_header.h
+
+
+INCLUDEPATH += C:\Armadillo\include
+
+
+LIBS += -LC:\Armadillo\lib_win64
+    -llapack_win64_MT
+    -lblas_win64_MT
