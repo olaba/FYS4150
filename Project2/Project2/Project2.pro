@@ -4,9 +4,10 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    jacobi_brute.cpp \
     jacobi_cyclic.cpp \
-    householder.cpp
+    householder.cpp \
+    jacobi_max.cpp \
+    lanczos.cpp
 
 INCLUDEPATH += C:\Users\Ola\Documents\armadillo\include
 

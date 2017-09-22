@@ -1,7 +1,7 @@
 #ifndef PROJECT2_HEADER_H
 #define PROJECT2_HEADER_H
 
-//Jacobi brute-force
+//Jacobi max
 
 
 
