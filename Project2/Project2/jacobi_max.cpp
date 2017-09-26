@@ -1,5 +1,5 @@
 //Jacobi max algorithm
-
+#include "project2_header.h"
 #include <iostream>
 #include "armadillo"
 
@@ -10,6 +10,8 @@ using namespace std;
 //Define tolerance
 
 double eps = 10^(-8);
+
+//Find
 
 cout << eps;
 
