@@ -7,7 +7,8 @@ SOURCES += main.cpp \
     jacobi_cyclic.cpp \
     householder.cpp \
     jacobi_max.cpp \
-    lanczos.cpp
+    lanczos.cpp \
+    max_off.cpp
 
 HEADERS += \
     project2_header.h

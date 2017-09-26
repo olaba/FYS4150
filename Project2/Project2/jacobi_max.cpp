@@ -1,10 +1,23 @@
-//Jacobi max algorithm
+//Jacobi algorithm, using max values.
+#include<armadillo>
+#include<project2_header.h>
+#include<iostream>
+using namespace arma;
+using namespace std;
+
+
+mat jacobi_max(mat A){
 
 //Define tolerance
+double eps = 10^-8;
 
-//While eps > off(A)
+//Find the biggest entry in A.
+double off_max =
 
-        //Find max in A (costs O(n^2) flops)
+
+while ( eps > off_max ){
+
+        max_off(mat A)
 
         //Compute Tau --> t --> c --> s
 
@@ -13,4 +26,9 @@
         //Execute transformation with the found values of c and s
 
         // if yes --> you're done!
+
         // if no --> new loops from new max
+
+}; //end while
+
+}// end function
