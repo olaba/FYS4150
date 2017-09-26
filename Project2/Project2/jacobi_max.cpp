@@ -8,16 +8,13 @@ using namespace std;
 
 mat jacobi_max(mat A){
 
-//Define tolerance
+//Define tolerance, pointers for biggest entry, and norm
 double eps = 10^-8;
+int *k;
+int *l;
+double off_norm = (norm(A,'fro'))^2 - ;
 
-//Find the biggest entry in A.
-double off_max =
-
-
-while ( eps > off_max ){
-
-        max_off(mat A)
+while ( eps > off_norm ){
 
         //Compute Tau --> t --> c --> s
 
@@ -25,9 +22,8 @@ while ( eps > off_max ){
 
         //Execute transformation with the found values of c and s
 
-        // if yes --> you're done!
+        //Find new biggest placement.
 
-        // if no --> new loops from new max
 
 }; //end while
 

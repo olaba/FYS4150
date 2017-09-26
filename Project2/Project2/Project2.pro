@@ -8,7 +8,8 @@ SOURCES += main.cpp \
     householder.cpp \
     jacobi_max.cpp \
     lanczos.cpp \
-    max_off.cpp
+    off_max.cpp \
+    off_norm.cpp
 
 HEADERS += \
     project2_header.h

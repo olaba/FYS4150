@@ -6,7 +6,7 @@
 using namespace arma;
 using namespace std;
 
-vec max_off(mat A){
+void max_off(mat A, int *k, int *l){
 
     //Declearing n, max value and a vector for indexes.
     int n = A.n_rows;
@@ -26,10 +26,10 @@ vec max_off(mat A){
                             max = Aij;
                             k = i;
                             l = j;
-                                }
-                       }
+                                }//end if
+                       } //end if
 
             }//end for j
         }// end for i
 
-}
+}//end function
