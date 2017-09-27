@@ -1,33 +1,29 @@
 //Calculates the maximum off diagonal
 //To use later in the jacobi algorithms
-#include<armadillo>
 #include<project2_header.h>
-#include<iostream>
 using namespace arma;
 using namespace std;
 
-void max_off(mat A, int *k, int *l){
+void max_off(mat A, int *max_r, int *max_c){
 
-    //Declearing n, max value and a vector for indexes.
+    //Declearing n, max value
     int n = A.n_rows;
     double max = 0.0;
-    int k;
-    int l;
 
-
+    //Two for loops over upper tridiagonal, since A remains
+    //symmetric even after rotation.
     for(int i = 0; i < n; i++){ //Rows
-                for(int j = 0; j < n; j++ ){ //Col
+                for(int j = (i+1); j < n; j++ ){ //Col
 
-                    if (i != j){
                        //Overwrites max, and saves indexes if bigger
                        double aij = fabs(A(i,j));
                        if (aij > max){
 
-                            max = Aij;
-                            k = i;
-                            l = j;
-                                }//end if
-                       } //end if
+                            max = aij;
+                            max_r = i;
+                            max_c = j;
+
+                            } //end if
 
             }//end for j
         }// end for i
