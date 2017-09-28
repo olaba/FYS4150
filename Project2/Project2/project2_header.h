@@ -1,8 +1,9 @@
 #ifndef PROJECT2_HEADER_H
 #define PROJECT2_HEADER_H
-#include <math.h>
+#include <cmath>
 #include <iostream>
-#include "armadillo"
+#include <armadillo>
+
 using namespace arma;
 using namespace std;
 

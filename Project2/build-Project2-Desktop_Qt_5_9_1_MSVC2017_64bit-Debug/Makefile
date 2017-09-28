@@ -230,6 +230,7 @@ Makefile: ..\..\..\..\GitHub\FYS4150\Project2\Project2\Project2.pro C:\Qt\5.9.1\
 		C:\Qt\5.9.1\msvc2017_64\mkspecs\features\qt_config.prf \
 		C:\Qt\5.9.1\msvc2017_64\mkspecs\win32-msvc\qmake.conf \
 		C:\Qt\5.9.1\msvc2017_64\mkspecs\features\spec_post.prf \
+		.qmake.stash \
 		C:\Qt\5.9.1\msvc2017_64\mkspecs\features\exclusive_builds.prf \
 		C:\Qt\5.9.1\msvc2017_64\mkspecs\common\msvc-version.conf \
 		C:\Qt\5.9.1\msvc2017_64\mkspecs\features\toolchain.prf \
@@ -405,6 +406,7 @@ C:\Qt\5.9.1\msvc2017_64\mkspecs\features\qt_functions.prf:
 C:\Qt\5.9.1\msvc2017_64\mkspecs\features\qt_config.prf:
 C:\Qt\5.9.1\msvc2017_64\mkspecs\win32-msvc\qmake.conf:
 C:\Qt\5.9.1\msvc2017_64\mkspecs\features\spec_post.prf:
+.qmake.stash:
 C:\Qt\5.9.1\msvc2017_64\mkspecs\features\exclusive_builds.prf:
 C:\Qt\5.9.1\msvc2017_64\mkspecs\common\msvc-version.conf:
 C:\Qt\5.9.1\msvc2017_64\mkspecs\features\toolchain.prf:

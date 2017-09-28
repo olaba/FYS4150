@@ -19,9 +19,9 @@ void max_off(mat A, int *max_r, int *max_c){
                        double aij = fabs(A(i,j));
                        if (aij > max){
 
-                            max = aij;
-                            max_r = i;
-                            max_c = j;
+                            *max = aij;
+                            *max_r = i;
+                            *max_c = j;
 
                             } //end if
 

@@ -33,6 +33,7 @@ while (eps < off_norm_val){
         //Update A
         Stemp = S*A;
         A = Stemp*S.t();
+
         //Execute transformation with the found values of c and s
 
 

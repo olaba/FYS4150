@@ -6,7 +6,9 @@ int main(){
 //Define matrix for one electron
 mat A = randu<mat>(4,4);
 
+double a = off_norm(A);
 
+//off_norm(A);
 //run jacobi_max
 
 //run jacobi_cyclic

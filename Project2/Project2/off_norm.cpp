@@ -1,6 +1,6 @@
 //Finds the updated offdiagonal norm
 #include "armadillo"
-#include<project2_header.h>
+#include "project2_header.h"
 
 using namespace arma;
 using namespace std;
@@ -9,7 +9,7 @@ double off_norm(mat A){
 
     //declearing a variable for "diagonal norm".
     double diagnorm = 0.0;
-    N = A.n_rows;
+    int N = A.n_rows;
 
     //forloop over size of matrix
     for(int i = 0; i < N; i++){

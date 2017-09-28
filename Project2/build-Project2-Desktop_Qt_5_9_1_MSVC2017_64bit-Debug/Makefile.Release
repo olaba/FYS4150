@@ -17,7 +17,7 @@ CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStri
 INCPATH       = -I..\..\..\..\GitHub\FYS4150\Project2\Project2 -I. -I..\..\..\..\armadillo\include -IC:\Qt\5.9.1\msvc2017_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /INCREMENTAL:NO /SUBSYSTEM:CONSOLE "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
-LIBS          = /LIBPATH:C:\Users\Ola\Documents\armadillo\examples\lib_win64 
+LIBS          = /LIBPATH:C:\Users\Ola\Documents\armadillo\examples\lib_win64 C:\Users\Ola\Documents\armadillo\examples\lib_win64\lapack_win64_MT.lib C:\Users\Ola\Documents\armadillo\examples\lib_win64\blas_win64_MT.lib 
 QMAKE         = C:\Qt\5.9.1\msvc2017_64\bin\qmake.exe
 IDC           = idc
 IDL           = midl /NOLOGO
@@ -48,7 +48,7 @@ OBJECTS_DIR   = release
 SOURCES       = ..\..\..\..\GitHub\FYS4150\Project2\Project2\main.cpp 
 OBJECTS       = release\main.obj
 
-DIST          =   ..\..\..\..\GitHub\FYS4150\Project2\Project2\main.cpp
+DIST          =  project2_header.h ..\..\..\..\GitHub\FYS4150\Project2\Project2\main.cpp
 QMAKE_TARGET  = Project2
 DESTDIR        = release\ #avoid trailing-slash linebreak
 TARGET         = Project2.exe
@@ -144,7 +144,8 @@ compiler_clean:
 
 ####### Compile
 
-release\main.obj: ..\..\..\..\GitHub\FYS4150\Project2\Project2\main.cpp ..\..\..\..\armadillo\include\armadillo \
+release\main.obj: ..\..\..\..\GitHub\FYS4150\Project2\Project2\main.cpp ..\..\..\..\GitHub\FYS4150\Project2\Project2\project2_header.h \
+		..\..\..\..\armadillo\include\armadillo \
 		..\..\..\..\armadillo\include\armadillo_bits\compiler_extra.hpp \
 		..\..\..\..\armadillo\include\armadillo_bits\config.hpp \
 		..\..\..\..\armadillo\include\armadillo_bits\compiler_setup.hpp \
