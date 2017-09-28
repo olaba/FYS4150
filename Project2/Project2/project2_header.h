@@ -2,15 +2,24 @@
 #define PROJECT2_HEADER_H
 
 #include <iostream>
+#include "armadillo"
+#include <math.h>
+
+
+using namespace arma;
 
 //Jacobi max
 
 
-void jacobi_max(mat A);
+mat jacobi_max(mat A);
+
+//off_norm
+
+double off_norm(mat A);
 
 //Jacobi cyclic
 
-
+void off_max(mat A, int *max_r, int *max_c);
 
 
 //householders algorithm

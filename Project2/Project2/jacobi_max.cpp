@@ -1,29 +1,49 @@
 //Jacobi max algorithm
 #include "project2_header.h"
-#include <iostream>
-#include "armadillo"
-
-using namespace arma;
-using namespace std;
 
 
-//Define tolerance
+mat jacobi_max(mat A){
 
-double eps = 10^(-8);
 
-//Find
+//Defining tolerance
+double eps = pow(10, -8);
+//Calculating norm of offdiagonal entries of A
+double off_norm_value = off_norm(A);
+//initializing indices for maximum off diagonal entry
+int max_row, max_col;
+int N = A.n_cols;
 
-cout << eps;
+//Define rotation matrix S
+mat S = eye<mat>(N,N);
+mat Stemp = eye<mat>(N,N);
 
-//While eps > off(A)
+while(eps < off_norm_value){
 
-        //Find max in A (costs O(n^2) flops)
 
-        //Compute Tau --> t --> c --> s
+    //Finding and assigning indices of maximum value
+    off_max(A, &max_row, &max_col);
 
-        //Update S and Stranspose.
+    // Computing tau, tangens, cos and sin for the angle making A(max)=0
+    double tau = (A(max_col, max_col)-A(max_row,max_row))/(2*A(max_row, max_col));
+    double t = -tau - sqrt(1+pow(tau,2));
+    double c = 1/(sqrt(1+pow(t,2)));
+    double s = t*c;
 
-        //Execute transformation with the found values of c and s
 
-        // if yes --> you're done!
-        // if no --> new loops from new max
+
+
+    //Rotating A
+    Stemp = S*A;
+    A = Stemp*S.t();
+
+
+}//end while
+
+return A;
+
+
+}//end function
+
+
+
+
