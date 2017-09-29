@@ -19,7 +19,7 @@ mat mat_generate_one(int N, double rho_max){
         A(i,i) = (2/pow(h, 2)) + pow((i+1)*h, 2);
 
         //upper and lower diagonal
-        if(i<(N-1)){
+        if(i<(N-3)){
             A(i+1,i)=-1/pow(h,2);
             A(i, i+1)=-1/pow(h,2);
 
