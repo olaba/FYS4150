@@ -105,11 +105,15 @@ DIST          = /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_cgl_support_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_charts.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_charts_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_clipboard_support_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_concurrent.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_core.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_core_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_datavisualization.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_dbus.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_dbus_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_designer.pri \
@@ -136,6 +140,8 @@ DIST          = /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_network.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_network_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_networkauth.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_networkauth_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_nfc.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_nfc_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_opengl.pri \
@@ -148,6 +154,8 @@ DIST          = /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_positioning_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_printsupport.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_printsupport_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_purchasing.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_purchasing_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_qml.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_qml_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
@@ -163,6 +171,14 @@ DIST          = /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_quickwidgets.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_remoteobjects.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_repparser.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_repparser_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_script.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_script_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scripttools.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scripttools_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scxml.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scxml_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_sensors.pri \
@@ -177,12 +193,21 @@ DIST          = /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_svg_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_testlib.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_testlib_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_texttospeech.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_theme_support_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_uiplugin.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_uitools.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_uitools_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webchannel.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webchannel_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webengine.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webengine_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginecore.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_websockets.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_websockets_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webview.pri \
@@ -230,9 +255,9 @@ DESTDIR       =
 TARGET        = Project2
 
 ####### Custom Variables
+EXPORT_ACTIVE_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(ARCHS))
 EXPORT_VALID_ARCHS = x86_64
 EXPORT_ARCH_ARGS = $(foreach arch, $(if $(EXPORT_ACTIVE_ARCHS), $(EXPORT_ACTIVE_ARCHS), $(EXPORT_VALID_ARCHS)), -arch $(arch))
-EXPORT_ACTIVE_ARCHS = $(filter $(EXPORT_VALID_ARCHS), $(ARCHS))
 
 
 first: all
@@ -282,11 +307,15 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_cgl_support_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_charts.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_charts_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_clipboard_support_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_concurrent.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_core.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_core_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_datavisualization.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_datavisualization_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_dbus.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_dbus_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_designer.pri \
@@ -313,6 +342,8 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_network.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_network_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_networkauth.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_networkauth_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_nfc.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_nfc_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_opengl.pri \
@@ -325,6 +356,8 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_positioning_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_printsupport.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_printsupport_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_purchasing.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_purchasing_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_qml.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_qml_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_qmldebug_private.pri \
@@ -340,6 +373,14 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_quickwidgets.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_quickwidgets_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_remoteobjects.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_remoteobjects_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_repparser.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_repparser_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_script.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_script_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scripttools.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scripttools_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scxml.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scxml_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_sensors.pri \
@@ -354,12 +395,21 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_svg_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_testlib.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_testlib_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_texttospeech.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_texttospeech_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_theme_support_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_uiplugin.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_uitools.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_uitools_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webchannel.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webchannel_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webengine.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webengine_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginecore.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginecore_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginewidgets.pri \
+		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_websockets.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_websockets_private.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webview.pri \
@@ -438,11 +488,15 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_bluetooth_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_bootstrap_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_cgl_support_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_charts.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_charts_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_clipboard_support_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_concurrent.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_concurrent_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_core.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_core_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_datavisualization.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_datavisualization_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_dbus.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_dbus_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_designer.pri:
@@ -469,6 +523,8 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_multimediawidgets_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_network.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_network_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_networkauth.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_networkauth_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_nfc.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_nfc_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_opengl.pri:
@@ -481,6 +537,8 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_positioning_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_printsupport.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_printsupport_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_purchasing.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_purchasing_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_qml.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_qml_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_qmldebug_private.pri:
@@ -496,6 +554,14 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_quicktemplates2_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_quickwidgets.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_quickwidgets_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_remoteobjects.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_remoteobjects_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_repparser.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_repparser_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_script.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_script_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scripttools.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scripttools_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scxml.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_scxml_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_sensors.pri:
@@ -510,12 +576,21 @@ Makefile: ../Project2/Project2.pro /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/macx
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_svg_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_testlib.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_testlib_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_texttospeech.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_texttospeech_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_theme_support_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_uiplugin.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_uitools.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_uitools_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webchannel.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webchannel_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webengine.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webengine_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginecore.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginecore_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginecoreheaders_private.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginewidgets.pri:
+/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webenginewidgets_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_websockets.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_websockets_private.pri:
 /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/modules/qt_lib_webview.pri:

@@ -8,5 +8,4 @@ int main()
     mat B = jacobi_max(A);
     cout << B << endl;
 
-
 }

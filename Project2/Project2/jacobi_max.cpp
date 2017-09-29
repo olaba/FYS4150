@@ -70,6 +70,8 @@ off_norm_value = off_norm(A);
 
 }//end while
 
+cout << off_norm_value<<endl;
+
 return A;
 
 
