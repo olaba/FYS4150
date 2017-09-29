@@ -19,6 +19,8 @@ double off_norm(mat A);
 
 //Jacobi cyclic
 
+mat jacobi_cyclic(mat A);
+
 void off_max(mat A, int *max_r, int *max_c);
 
 

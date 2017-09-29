@@ -4,26 +4,26 @@
 using namespace std;
 using namespace arma;
 
-mat jacobi_cyclic(mat A){
+mat jacobi_cyclic(mat D){
 
 
 //initializing dimention N and eigenvectormatrix x
-int N = A.n_cols;
+int N = D.n_cols;
 mat x = eye<mat>(N,N);
 
 //Defining tolerance
 double eps = pow(10, -8);
 
-//Calculating norm of offdiagonal entries of A
-double off_norm_value = off_norm(A);
+//Calculating norm of offdiagonal entries of D
+double off_norm_value = off_norm(D);
 
 while(off_norm_value > eps){
   for(int i = 0; i < N; i++){
       for(int j=(i+1); j < N; j++){
 
 
-          // Computing tau, tangens, cos and sin for the angle making A(i,j)=A(j,i)=0
-          double tau = (A(j, j)-A(i,i))/(2*A(i, j));
+          // Computing tau, tangens, cos and sin for the angle making D(i,j)=D(j,i)=0
+          double tau = (D(j, j)-D(i,i))/(2*D(i, j));
           double t = -tau - sqrt(1+pow(tau,2));
           double c = 1/(sqrt(1+pow(t,2)));
           double s = t*c;
@@ -31,27 +31,49 @@ while(off_norm_value > eps){
 
 
           //Declearing temp. values for flipping/rotating procedure
-          double a_cc, a_rr, a_ic, a_ir, x_ic, x_ir;
+          double a_cc, a_rr, a_kc, a_kr, x_kc, x_kr;
 
           //rotating A, first the diagonals
-          a_cc = A(j,j);
-          a_rr = A(i,i);
-          A(j,j) = c*c*a_cc - 2.0*c*s*A(j,i) + s*s*a_rr;
-          A(i,i) = s*s*a_cc + 2.0*c*s*A(j,j) + c*c*a_rr;
-          A(i,j) = 0.0;
-          A(j,i) = 0.0;
+          a_cc = D(j,j);
+          a_rr = D(i,i);
+          D(j,j) = c*c*a_cc - 2.0*c*s*D(j,i) + s*s*a_rr;
+          D(i,i) = s*s*a_cc + 2.0*c*s*D(j,j) + c*c*a_rr;
+          D(i,j) = 0.0;
+          D(j,i) = 0.0;
 
 
+          //then the offdiagonals
+              for(int k = 0; k < N; k++){
 
+                  //if that stops the diagonals from flipping again.
+                  if( k != j && k != i){
 
-        }//end for i
+                      a_kr = D(k,i);
+                      a_kc = D(k,j);
+                      D(k,j) = c*a_kc - s*a_kr;
+                      D(j,k) = D(k,j);
+                      D(k,i) = c*a_kr + s*a_kc;
+                      D(i,k) = D(k,i);
 
-    }//end for j
+                  }//end if
 
+                  //Lastly updates the eigenvector
+                  x_kc = x(k,j);
+                  x_kr = x(k,i);
+                  x(k,j) = c*x_kc - s*x_kr;
+                  x(k,i) = c*x_kr - s*x_kc;
+
+              }//end for
+
+        }//end for j
+
+    }//end for i
+
+    off_norm_value = off_norm(D);
 
 }//end while
 
-
+return D;
 
 
 }//end function
