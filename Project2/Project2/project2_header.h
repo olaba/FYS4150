@@ -9,18 +9,18 @@
 using namespace arma;
 
 //Jacobi max
-
-
 mat jacobi_max(mat A);
 
 //off_norm
-
 double off_norm(mat A);
 
 //Jacobi cyclic
-
 mat jacobi_cyclic(mat A);
 
+//One electron matrix generator
+//mat mat_generate_one(int N);
+
+//Offdiagonal max-finder
 void off_max(mat A, int *max_r, int *max_c);
 
 

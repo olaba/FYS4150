@@ -9,7 +9,8 @@ SOURCES += main.cpp \
     jacobi_max.cpp \
     lanczos.cpp \
     off_norm.cpp \
-    off_max.cpp
+    off_max.cpp \
+    mat_generate_one.cpp
 
 
 INCLUDEPATH += /usr/local/include
