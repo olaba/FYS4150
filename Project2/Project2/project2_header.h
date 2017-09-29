@@ -4,6 +4,7 @@
 #include <iostream>
 #include "armadillo"
 #include <math.h>
+#include <chrono>
 
 
 using namespace arma;

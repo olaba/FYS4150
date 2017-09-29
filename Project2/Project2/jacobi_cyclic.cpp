@@ -17,6 +17,13 @@ double eps = pow(10, -8);
 //Calculating norm of offdiagonal entries of D
 double off_norm_value = off_norm(D);
 
+
+//Decleare start and stop time.
+   std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
+   // Start time ------------------------------------------------
+   start = std::chrono::high_resolution_clock::now();
+
+
 while(off_norm_value > eps){
   for(int i = 0; i < N; i++){
       for(int j=(i+1); j < N; j++){
@@ -72,6 +79,11 @@ while(off_norm_value > eps){
     off_norm_value = off_norm(D);
 
 }//end while
+
+//Stop time --------------------------------------------
+end = std::chrono::high_resolution_clock::now();
+cout << "Jacobi_cyclic used: " <<(double) chrono::duration_cast<chrono::nanoseconds>(end-start).count() << " nanoseconds for n = " << N << "\n";
+
 
 return D;
 

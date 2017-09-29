@@ -19,6 +19,11 @@ int N = A.n_cols;
 mat x = eye<mat>(N,N);
 
 
+//Decleare start and stop time.
+   std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
+   // Start time ------------------------------------------------
+   start = std::chrono::high_resolution_clock::now();
+
 while(eps < off_norm_value){
 
 
@@ -69,6 +74,12 @@ while(eps < off_norm_value){
 off_norm_value = off_norm(A);
 
 }//end while
+
+
+
+//Stop time --------------------------------------------
+end = std::chrono::high_resolution_clock::now();
+cout << "Jacobi_max used: " <<(double) std::chrono::duration_cast<std::chrono::nanoseconds>(end-start).count() << " nanoseconds for n = " << N << "\n";
 
 //returns
 return A;
