@@ -38,7 +38,7 @@ int main()
 
 
 
-
+    //Prints out the eigenvalue results
     cout << "eigenvalues from maxalgo: " << endl << our_eigenvalues_maxalgo << endl;
     cout << "eigenvalues from cyclicalgo: "<< endl << our_eigenvalues_cyclicalgo << endl;
     cout << "eigenvalues from armadillo function: " << endl << armeigenval << endl;

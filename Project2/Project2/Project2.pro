@@ -10,7 +10,8 @@ SOURCES += main.cpp \
     lanczos.cpp \
     off_norm.cpp \
     off_max.cpp \
-    mat_generate_one.cpp
+    mat_generate_one.cpp \
+    unit_test.cpp
 
 
 INCLUDEPATH += /usr/local/include
