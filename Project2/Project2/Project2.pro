@@ -10,8 +10,9 @@ SOURCES += main.cpp \
     lanczos.cpp \
     off_norm.cpp \
     off_max.cpp \
-    mat_generate_one.cpp \
-    unit_test.cpp
+    test-main.cpp \
+    test-functions.cpp \
+    mat_generate.cpp
 
 
 INCLUDEPATH += /usr/local/include
@@ -21,4 +22,5 @@ LIBS += -L/usr/local/lib
 LIBS += -larmadillo -llapack -lblas
 
 HEADERS += \
-    project2_header.h
+    project2_header.h \
+    test-functions

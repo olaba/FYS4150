@@ -1,5 +1,5 @@
 #include"project2_header.h"
-
+#include "catch.hpp"
 using namespace arma;
 using namespace std;
 

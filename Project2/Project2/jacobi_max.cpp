@@ -6,7 +6,7 @@ mat jacobi_max(mat A){
 
 
 //Defining tolerance
-double eps = pow(10, -8);
+double eps = pow(10, -12);
 
 //Calculating norm of offdiagonal entries of A
 double off_norm_value = off_norm(A);
@@ -18,6 +18,8 @@ int N = A.n_cols;
 //initializing the eigenvector
 mat x = eye<mat>(N,N);
 
+//Initializing iteration counter
+int it_count = 0;
 
 //Decleare start and stop time.
    std::chrono::time_point<std::chrono::high_resolution_clock> start, end;
@@ -30,11 +32,28 @@ while(eps < off_norm_value){
     //Finding and assigning indices of maximum value
     off_max(A, &max_row, &max_col);
 
-    // Computing tau, tangens, cos and sin for the angle making A(max)=0
-    double tau = (A(max_col, max_col)-A(max_row,max_row))/(2*A(max_row, max_col));
-    double t = -tau - sqrt(1+pow(tau,2));
-    double c = 1/(sqrt(1+pow(t,2)));
-    double s = t*c;
+    //Declearing the cosine and sine values
+    double c,s;
+
+    //If-statement that accounts for maximum element beeing zero
+    if(A(max_row, max_col) != 0){
+
+        // Computing tau, tangens, cos and sin for the angle making A(max)=0
+        double tau = (A(max_col, max_col)-A(max_row,max_row))/(2*A(max_row, max_col));
+        double t = -tau - sqrt(1+pow(tau,2));
+        //if-statement that accounts for sign of tau
+        //double t {tau > 0 ? 1./(tau+sqrt(1.+tau*tau)) : -1./(-tau+sqrt(1. + tau*tau))};
+        c = 1/(sqrt(1+pow(t,2)));
+        s = t*c;
+
+        }//end if
+
+    //If max element is zero?
+    else{
+
+        c=1.;
+        s=0.;
+    }
 
     //Declearing temp. values for flipping/rotating procedure
     double a_cc, a_rr, a_ic, a_ir, x_ic, x_ir;
@@ -42,8 +61,8 @@ while(eps < off_norm_value){
     //rotating A, first the diagonals
     a_cc = A(max_col,max_col);
     a_rr = A(max_row,max_row);
-    A(max_col,max_col) = c*c*a_cc - 2.0*c*s*A(max_col,max_row) + s*s*a_rr;
-    A(max_row,max_row) = s*s*a_cc + 2.0*c*s*A(max_col,max_row) + c*c*a_rr;
+    A(max_col,max_col) = s*s*a_cc - 2.0*c*s*A(max_col,max_row) + c*c*a_rr;
+    A(max_row,max_row) = s*s*a_rr + 2.0*c*s*A(max_col,max_row) + c*c*a_cc;
     A(max_row,max_col) = 0.0; //så har me juksa litt
     A(max_col,max_row) = 0.0; //her også
 
@@ -73,13 +92,19 @@ while(eps < off_norm_value){
 //recalculates the offnorm of A
 off_norm_value = off_norm(A);
 
+//Adding iteration to counter
+it_count++;
+
 }//end while
-
-
 
 //Stop time --------------------------------------------
 end = std::chrono::high_resolution_clock::now();
 cout << "Jacobi_max used: " <<(double) std::chrono::duration_cast<std::chrono::nanoseconds>(end-start).count() << " nanoseconds for n = " << N << "\n";
+
+
+//Printing total iterations
+cout << "Number of iterations performed by jacobi_max:" << it_count << endl;
+
 
 //returns
 return A;

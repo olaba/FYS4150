@@ -30,11 +30,11 @@ while(off_norm_value > eps){
 
 
           // Computing tau, tangens, cos and sin for the angle making D(i,j)=D(j,i)=0
+          //HER MÅ VI HA EN IF så vi unngår nan nan nan!
           double tau = (D(j, j)-D(i,i))/(2*D(i, j));
           double t = -tau - sqrt(1+pow(tau,2));
           double c = 1/(sqrt(1+pow(t,2)));
           double s = t*c;
-
 
 
           //Declearing temp. values for flipping/rotating procedure

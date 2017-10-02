@@ -5,18 +5,14 @@ int main()
 {
 
     //Initialize size, rho, matrix for one electron case
-    double rho = 100;
-    int N = 10;
-    mat Ola = mat_generate_one(N, rho);
-    mat Olato = mat_generate_one(N, rho);
+    double rho = 10;
+    int N = 100;
+    mat Ola = mat_generate(N, rho, true);
 
     //Do the jacobi rotation max algo and take out the eigenvalues
     mat Ingvild = jacobi_max(Ola);
     vec our_eigenvalues_maxalgo = Ingvild.diag();
-
-    //Do the jacobi rotation cyclic algo and take out the eigenvalues
-    mat Hanne = jacobi_cyclic(Olato);
-    vec our_eigenvalues_cyclicalgo = Hanne.diag();
+    //vec our_sorted_eigenvalues_maxalgo = sort(our_eigenvalues_maxalgo);
 
     //initiates eigenvector matrix and eigenvaluecolumn for the eig_sym function
     Col<double> armeigenval;
@@ -31,15 +27,20 @@ int main()
        //Armadillo function for finding eigenvalues
        eig_sym(armeigenval,armeigenvec,Ola);
 
+       vec sort_armeigenval = sort(armeigenval);
+
 
        //Stop time --------------------------------------------
        end = std::chrono::high_resolution_clock::now();
-       cout << "Armadillo function used: " <<(double) chrono::duration_cast<chrono::nanoseconds>(end-start).count() << " nanoseconds for n = " << (N-2) << "\n";
+       cout << "Armadillo function used: " <<(double) chrono::duration_cast<chrono::nanoseconds>(end-start).count() << " nanoseconds for n = " << N << "\n";
 
 
 
     //Prints out the eigenvalue results
-    cout << "eigenvalues from maxalgo: " << endl << our_eigenvalues_maxalgo << endl;
-    cout << "eigenvalues from cyclicalgo: "<< endl << our_eigenvalues_cyclicalgo << endl;
-    cout << "eigenvalues from armadillo function: " << endl << armeigenval << endl;
+    //for(int i = 0; i < 3; i++){
+    cout <<"lowest "  << " eigenvalue from maxalgo: " << endl << our_eigenvalues_maxalgo << endl;
+    cout << "lowest " << "" << "eigenvalue from armadillo function: " << endl << armeigenval << endl;
+       //} //end for
+
 }
+

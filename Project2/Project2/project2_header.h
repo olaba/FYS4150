@@ -19,7 +19,8 @@ double off_norm(mat A);
 mat jacobi_cyclic(mat A);
 
 //One electron matrix generator
-mat mat_generate_one(int N, double rho_max);
+mat mat_generate(int N, double rho_max, bool one_electron);
+
 //Offdiagonal max-finder
 void off_max(mat A, int *max_r, int *max_c);
 

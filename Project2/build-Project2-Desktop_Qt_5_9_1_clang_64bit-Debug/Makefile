@@ -57,7 +57,9 @@ SOURCES       = ../Project2/main.cpp \
 		../Project2/lanczos.cpp \
 		../Project2/off_norm.cpp \
 		../Project2/off_max.cpp \
-		../Project2/mat_generate_one.cpp 
+		../Project2/test-main.cpp \
+		../Project2/test-functions.cpp \
+		../Project2/mat_generate.cpp 
 OBJECTS       = main.o \
 		jacobi_cyclic.o \
 		householder.o \
@@ -65,7 +67,9 @@ OBJECTS       = main.o \
 		lanczos.o \
 		off_norm.o \
 		off_max.o \
-		mat_generate_one.o
+		test-main.o \
+		test-functions.o \
+		mat_generate.o
 DIST          = /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/qdevice.pri \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/device_config.prf \
@@ -245,14 +249,17 @@ DIST          = /Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/spec_pre.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/exceptions.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/yacc.prf \
 		/Users/ingvild/Qt/5.9.1/clang_64/mkspecs/features/lex.prf \
-		../Project2/Project2.pro project2_header.h ../Project2/main.cpp \
+		../Project2/Project2.pro project2_header.h \
+		test-functions ../Project2/main.cpp \
 		../Project2/jacobi_cyclic.cpp \
 		../Project2/householder.cpp \
 		../Project2/jacobi_max.cpp \
 		../Project2/lanczos.cpp \
 		../Project2/off_norm.cpp \
 		../Project2/off_max.cpp \
-		../Project2/mat_generate_one.cpp
+		../Project2/test-main.cpp \
+		../Project2/test-functions.cpp \
+		../Project2/mat_generate.cpp
 QMAKE_TARGET  = Project2
 DESTDIR       = 
 TARGET        = Project2
@@ -3398,10 +3405,17 @@ off_max.o: ../Project2/off_max.cpp ../Project2/project2_header.h \
 		/usr/local/include/armadillo_bits/newarp_TridiagEigen_meat.hpp \
 		/usr/local/include/armadillo_bits/newarp_UpperHessenbergEigen_meat.hpp \
 		/usr/local/include/armadillo_bits/newarp_UpperHessenbergQR_meat.hpp \
-		/usr/local/include/armadillo_bits/compiler_setup_post.hpp
+		/usr/local/include/armadillo_bits/compiler_setup_post.hpp \
+		../Project2/catch.hpp
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o off_max.o ../Project2/off_max.cpp
 
-mat_generate_one.o: ../Project2/mat_generate_one.cpp ../Project2/project2_header.h \
+test-main.o: ../Project2/test-main.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o test-main.o ../Project2/test-main.cpp
+
+test-functions.o: ../Project2/test-functions.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o test-functions.o ../Project2/test-functions.cpp
+
+mat_generate.o: ../Project2/mat_generate.cpp ../Project2/project2_header.h \
 		/usr/local/include/armadillo \
 		/usr/local/include/armadillo_bits/compiler_extra.hpp \
 		/usr/local/include/armadillo_bits/config.hpp \
@@ -3943,7 +3957,7 @@ mat_generate_one.o: ../Project2/mat_generate_one.cpp ../Project2/project2_header
 		/usr/local/include/armadillo_bits/newarp_UpperHessenbergEigen_meat.hpp \
 		/usr/local/include/armadillo_bits/newarp_UpperHessenbergQR_meat.hpp \
 		/usr/local/include/armadillo_bits/compiler_setup_post.hpp
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mat_generate_one.o ../Project2/mat_generate_one.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mat_generate.o ../Project2/mat_generate.cpp
 
 ####### Install
 
