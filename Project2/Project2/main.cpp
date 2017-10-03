@@ -5,8 +5,8 @@ int main()
 {
 
     //Initialize size, rho, matrix for one electron case
-    double rho = 10;
-    int N = 100;
+    double rho = 7.9;
+    int N = 400;
     mat Ola = mat_generate(N, rho, true);
 
     //Do the jacobi rotation max algo and take out the eigenvalues
@@ -27,20 +27,19 @@ int main()
        //Armadillo function for finding eigenvalues
        eig_sym(armeigenval,armeigenvec,Ola);
 
-       vec sort_armeigenval = sort(armeigenval);
-
 
        //Stop time --------------------------------------------
        end = std::chrono::high_resolution_clock::now();
        cout << "Armadillo function used: " <<(double) chrono::duration_cast<chrono::nanoseconds>(end-start).count() << " nanoseconds for n = " << N << "\n";
 
-
+       vec sort_armeigenval = sort(armeigenval);
+       vec sort_our_eigenvalues_maxalgo = sort(our_eigenvalues_maxalgo);
 
     //Prints out the eigenvalue results
     //for(int i = 0; i < 3; i++){
-    cout <<"lowest "  << " eigenvalue from maxalgo: " << endl << our_eigenvalues_maxalgo << endl;
-    cout << "lowest " << "" << "eigenvalue from armadillo function: " << endl << armeigenval << endl;
-       //} //end for
+    cout <<"lowest "  << " eigenvalue from maxalgo: " << endl << sort_our_eigenvalues_maxalgo << endl;
+    cout << "lowest " << "" << "eigenvalue from armadillo function: " << endl << sort_armeigenval << endl;
+       } //end for
 
-}
+//}
 

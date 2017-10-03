@@ -6,7 +6,7 @@ mat mat_generate(int N, double rho_max, bool one_electron){
 
     //define stepsize h and omega (from paper).
     double h = rho_max/N;
-    double omega = 0.625;
+    double omega = 5;
 
     //initializing "schrödinger" matrix. Endpoints not included
     mat A;

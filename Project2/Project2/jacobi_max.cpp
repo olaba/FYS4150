@@ -6,7 +6,7 @@ mat jacobi_max(mat A){
 
 
 //Defining tolerance
-double eps = pow(10, -12);
+double eps = pow(10, -8);
 
 //Calculating norm of offdiagonal entries of A
 double off_norm_value = off_norm(A);
@@ -34,21 +34,32 @@ while(eps < off_norm_value){
 
     //Declearing the cosine and sine values
     double c,s;
+    double t;
 
     //If-statement that accounts for maximum element beeing zero
-    if(A(max_row, max_col) != 0){
+    if(A(max_row, max_col) != 0.0){
 
         // Computing tau, tangens, cos and sin for the angle making A(max)=0
-        double tau = (A(max_col, max_col)-A(max_row,max_row))/(2*A(max_row, max_col));
-        double t = -tau - sqrt(1+pow(tau,2));
+        double tau = (A(max_col, max_col)-A(max_row,max_row))/(2*A(max_col, max_row));
+        //double t = -tau - sqrt(1+pow(tau,2));
         //if-statement that accounts for sign of tau
-        //double t {tau > 0 ? 1./(tau+sqrt(1.+tau*tau)) : -1./(-tau+sqrt(1. + tau*tau))};
-        c = 1/(sqrt(1+pow(t,2)));
+        if(tau >= 0){
+
+            t = 1./(tau+sqrt(1.+tau*tau));
+        }
+
+        else{
+
+           t = -1./(-tau+sqrt(1. + tau*tau));
+
+        }
+
+        c = 1/(sqrt(1+t*t));
         s = t*c;
 
         }//end if
 
-    //If max element is zero?
+    //If max element is zero? (Why need this when we do the max algo?)
     else{
 
         c=1.;
@@ -61,8 +72,8 @@ while(eps < off_norm_value){
     //rotating A, first the diagonals
     a_cc = A(max_col,max_col);
     a_rr = A(max_row,max_row);
-    A(max_col,max_col) = s*s*a_cc - 2.0*c*s*A(max_col,max_row) + c*c*a_rr;
-    A(max_row,max_row) = s*s*a_rr + 2.0*c*s*A(max_col,max_row) + c*c*a_cc;
+    A(max_col,max_col) = s*s*a_rr + 2.0*c*s*A(max_col,max_row) + c*c*a_cc;
+    A(max_row,max_row) = c*c*a_rr - 2.0*c*s*A(max_col,max_row) + s*s*a_cc;
     A(max_row,max_col) = 0.0; //så har me juksa litt
     A(max_col,max_row) = 0.0; //her også
 
@@ -72,8 +83,8 @@ while(eps < off_norm_value){
         //if that stops the diagonals from flipping again.
         if( i != max_col && i != max_row){
 
-            a_ir = A(i,max_row);
             a_ic = A(i,max_col);
+            a_ir = A(i,max_row);
             A(i,max_col) = c*a_ic - s*a_ir;
             A(max_col,i) = A(i,max_col);
             A(i,max_row) = c*a_ir + s*a_ic;
@@ -85,7 +96,7 @@ while(eps < off_norm_value){
         x_ic = x(i,max_col);
         x_ir = x(i,max_row);
         x(i,max_col) = c*x_ic - s*x_ir;
-        x(i,max_row) = c*x_ir - s*x_ic;
+        x(i,max_row) = c*x_ir + s*x_ic;
 
     }//end for
 
