@@ -6,7 +6,7 @@ int main()
 
     //Initialize size, rho, matrix for one electron case
     double rho = 7.9;
-    int N = 300;
+    int N = 200;
     mat Ola = mat_generate(N, rho, true);
 
     //Do the jacobi rotation max algo and take out the eigenvalues
@@ -42,5 +42,5 @@ int main()
     cout <<" eigenvalues from maxalgo: " << endl << sort_our_eigenvalues_maxalgo << endl;
     cout <<"eigenvalues from armadillo function: " << endl << sort_armeigenval << endl;
 
-//}
+}
 
