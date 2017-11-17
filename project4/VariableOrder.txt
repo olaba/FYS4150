@@ -1,3 +1,3 @@
 Order of variables are always
 
-<E> Cv <M> X |abs|
+T <E> Cv <M> X |M|
