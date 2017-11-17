@@ -1,0 +1,24 @@
+
+	THINGS TO DO ON PROJECT 4
+	
+	a) 	- Find analytic solutions 					OK		Found them!						No file
+		- Plot Analytic solutions vs temperature.			NOT OK		Someone needs to plot this in python			No file yet
+	
+	
+
+	b) 	- Make a MC code for Ising model 				OK		Thanks to Morten and Giovanni!				main.cpp
+		- Check results against Analytic				OK		They fit! 						4b_1M
+		- Run several times to find how many MC cycles are req.		OK		Have values for 10,100,1000,10000,100000, 1M  mcs	4b_10, 4b_100, 4b_1000, 4b_10000, 4b_100000, 4b_1M	
+
+	c) 	- Run for a 20x20 lattice T = 1.0, initial spin up		OK		Number of accepted flips per mcs = 0.29005		4c_T1C1MU
+		- Run for a 20x20 lattice T = 2.4, initial spin up		OK		Number of accepted flips per mcs = 107.842		4c_T24C1MU
+		- Run for a 20x20 lattice T = 1.0, initial spin random		OK		Number of accepted flips per mcs = 0.292448		4c_T1C1MR
+		- Run for a 20x20 lattice T = 2.4, initial spin random		OK		Number of accepted flips per mcs = 107.65		4c_T24C1MR 			
+		- Plot E and M for all four cases				NOT OK		Somebody need to plot these. files may be big?		No file yet
+		- Run for a 20x20 lattice T = 1.5, initial spin up		OK		Number of accepted flips per mcs = 5.35361		4c_T15C1MU (but not to be used)	
+		- Run for a 20x20 lattice T = 1.5, initial spin random		OK		Number of accepted flips per mcs = 5.38028		4c_T15C1MR (but not to be used)
+		- Plot number of accepted spins vs temp (1,1.5,2.4)		NOT OK		Use the values found above. quite similar for U and R	No file yet
+
+	d) 	- 
+		
+		
