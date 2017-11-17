@@ -1,4 +1,5 @@
 
+	
 	THINGS TO DO ON PROJECT 4
 	
 	a) 	- Find analytic solutions 					OK		Found them!						No file
@@ -19,6 +20,26 @@
 		- Run for a 20x20 lattice T = 1.5, initial spin random		OK		Number of accepted flips per mcs = 5.38028		4c_T15C1MR (but not to be used)
 		- Plot number of accepted spins vs temp (1,1.5,2.4)		NOT OK		Use the values found above. quite similar for U and R	No file yet
 
-	d) 	- 
-		
+	d) 	- Run for 20x20 lattice T = 1.0 initial spin up, 2M mcs		OK		To use in next "task"					4d_T1C2MU
+		- Run for a 20x20 lattice T = 2.4, initial spin up, 2M mcs	OK		To use in next "task"					4d_T24C2MU
+		- Count different E's between 1M and 2M mcs (equlibrium)	NOT OK		Can be done in python/or in c++				No file yet
+		- Plot histograms of the counted E's 				NOT OK		Can be done in python					No file yet
+		- Plot the Cv for both "on top of" this?			NOT OK		Can be done in python					No file yet
+
+
+---------------------------------------------------------------         PARALELLIZATION PART      -------------------------------------------------------------------------------------------------------
+	
+	e)	- Paralellize the cøde						OK		Thanks to Morten and Giovanni!				mpimain.cpp
+		- Fix timing for code						NOT OK		Hmmmmm
+		- Run for 20x20 lattice, loop over T				NOT OK 		Run at 4 nodes. T[2,2.3], Dt = 0.05
+		- Run for 40x40 lattice, loop over T				NOT OK		Run at 4 nodes. T[2,2.3], Dt = 0.05										
+                - Run for 60x60 lattice, loop over T				NOT OK		Run at 4 nodes. T[2,2.3], Dt = 0.05
+		- Run for 80x80 lattice, loop over T				NOT OK		Run at 4 nodes. T[2,2.3], Dt = 0.05
+		- Run for 100x100 lattice, loop over T				NOT OK		Run at 4 nodes. T[2,2.3], Dt = 0.05
+		- Plot <E> vs temp for all lattice sizes			NOT OK		Python
+		- Plot <|M|> vs temp for all lattice sizes			NOT OK		Python
+		- Plot Cv vs temp for all lattice sizes				NOT OK		Python
+		- Plot X vs temp for all lattice sizes				NOT OK		Python
+
+	f)	- Usikker her
 		
